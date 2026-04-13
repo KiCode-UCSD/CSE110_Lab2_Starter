@@ -1,0 +1,277 @@
+<!-- ELEMENTS TO INCLUDE
+
+DOCUMENT METADATA
+-- title
+-- meta
+-- link 
+  - (usually <link> is used to link a stylesheet, but since we're not using CSS, 
+     you can use it to link a faviconLinks to an external site instead)
+
+CONTENT SECTIONING
+-- main
+-- header, footer
+-- nav
+-- h1, h2, h3
+-- section
+
+TEXT CONTENT
+-- div, span 
+  - (these elements may not be too useful without CSS / JavaScript, but are too important to leave out, 
+     so just include them somewhere in your document. It’s okay if they aren’t useful)
+-- hr
+-- p
+-- ul
+-- ol
+-- li
+
+INLINE TEXT SEMANTICS
+-- b
+-- strong (know the differences between b and strong)
+-- i
+-- em (know the differences between i and em)
+-- a
+-- br
+
+IMAGES AND MULTIMEDIA
+-- img
+- audio
+- video
+
+INTERACTIVE ELEMENTS
+-- details
+-- summary
+
+FORMS
+-- form
+-- fieldset
+-- input (of types checkbox, radio, text, and date)**
+-- textarea
+-- datalist
+-- select
+-- option
+-- button
+-->
+
+<!DOCTYPE html>
+<!--Metadata-->
+<meta 
+  name="description"
+  content="The team 7 ate 9 meeting minutes discussing the upcoming fight between the pres and vp"
+/>
+
+<!-- Header for navigation buttons -->
+<header>
+  <div id="top-header">
+    <!-- Team Logo -->
+    <div id="logo">
+      <img src="Team789Logo.png" alt="Team789 Logo" width="580px" height="270px"/>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav>
+      <div id="menu">
+        <ul>
+          <li><a href="#sect1">Attendees</a></li>
+          <li><a href="#sect2">Agenda</a></li>
+          <li><a href="#sect3">Unfinished Business</a></li>
+          <li><a href="#sect4">New Business</a></li>
+          <li><a href="#sect5">Misc</a></li>
+          <li><a href="#sect6">Pictures/Diagrams</a></li>
+          <li><a href="#sect7">Audio Recording</a></li>
+          <li><a href="#sect8">Video Recording</a></li>
+          <li><a href="#sect9">Important Links</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<html lang="en">
+  <head>
+    <title>Team 789 Meeting Notes</title>
+
+    <!--Boxing glove favicon-->
+    <link rel="icon" 
+      type="image/x-icon"
+      href="favicon.ico>
+  </head>
+
+  <body>
+    <main>
+      <hr/>
+      <h1>Leadership meeting</h1>
+      <h1>Date: 4/10/26</h1>
+      
+      <section>
+        <h2 id="sect1">Attendees:</h2>
+        <ul>
+          <li>President</li>
+          <li>Vice president</li>
+          <li>Treasurer</li>
+          <li>PR lead</li>
+        </ul>
+      </section>
+      
+      <section>
+        <!--Form to take name for attendance-->
+        <details>
+          <summary>
+            <b>Take attendance:</b>
+          </summary>
+
+          <form action="" method="get" class="attendance-form">
+            <div class="attendance-form">
+              <label for="name">Enter your name: </label>
+              <input type="text" name="name" id="name" required />
+            </div>
+
+            <div class="attendace-form">
+              <input type="submit" value="I'm here!" />
+            </div>
+          </form>
+        </details>
+      </section>
+
+      <section>
+        <h2 id="sect2">Agenda:</h2>
+        <ol>
+          <li>Have treasurer take bets</li>
+          <li>President and vp fight in the ring</li>
+          <li>PR lead records match and posts to ig for publicity</li>
+          <li><b>Profit!</b></li>
+        </ol>
+      </section>
+
+      <section>
+        <h2 id="sect3">Unfinished Business:</h2>
+        <p>
+          Beef between pres and vp
+        </p>
+      </section>
+
+      <section>
+        <h2 id="sect4">New Business:</h2>
+
+        <!--Dropdown list to pick next fight matchup-->
+        <label for="fight-matchup">Who do you want to fight next?</label>
+        <input list="matchups" id="fight-matchup" name="fight-matchup"/>
+
+        <datalist id="matchups">
+          <option value="President vs. Treasurer"></option>
+          <option value="President vs. PR lead"></option>
+          <option value="VP vs. Treasurer"></option>
+          <option value="VP vs. PR lead"></option>
+          <option value="Secretary vs. Treasurer"></option>
+        </datalist>
+
+        <!--fieldset to take bets-->
+        <h3>Make a bet!</h3>
+
+        <form>
+          <fieldset>
+            <legend>Choose your bet level</legend>
+
+            <input type="radio" id="low" name="bet" value="10" />
+            <label for="low">$10</label> <br>
+
+            <input type="radio" id="medium" name="bet" value="50" />
+            <label for="medium">$50</label> <br>
+
+            <input type="radio" id="high" name="bet" value="100" />
+            <label for="high">$100</label> <br>
+          </fieldset>
+        </form>
+
+        <!--Gather data for fight attendance-->
+        <h3>Fight Attendance</h3>
+
+        <label for="go-to-fight">Will you attend the fight?</label>
+
+        <select name="options" id="go-to-fight">
+          <option value="">--Please choose an option--</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+          <option value="maybe">Maybe</option>
+        </select>
+      </section>
+
+      <section>
+        <h2 id="sect5">Misc:</h2>
+
+        <i>
+          <span>Comments, </span>
+          <span>Questions, </span>
+          <span>Concerns?</span>
+        </i>
+        
+        <!--Textbox to leave feedback-->
+        <label for="cqc">Leave your feedback here:</label>
+
+        <textarea id="cqc" name="feedback" rows="5" cols="35"></textarea>
+      </section>
+
+      <section>
+        <h2 id="sect6">Pictures/Diagrams:</h2>
+
+        <!--Fight promotion poster-->
+        <img src="fight-ad-poster.png" alt="Fight Poster Ad" width="200px" height="300px"/>
+      </section>
+
+      <section>
+        <h2 id="sect7">Audio Recording:</h2>
+
+        <figure>
+          <figcaption>Listen to the fight:</figcaption>
+
+          <audio controls src="boxing-animation.mp3"></audio>
+
+          <br>
+          Download the 
+          <a href="boxing-animation.mp3">MP3</a>
+          file.
+        </figure>
+      </section>
+
+      <section>
+        <h2 id="sect8">Video Recording:</h2>
+
+        <video controls width="250">
+          <source src="boxing-animation.mp4" type="video/mp4" />
+
+          Download the 
+          <a href="boxing-animation.mp4">MP4</a>
+          video.
+        </video>
+      </section>
+
+      <section>
+        <h2 id="sect9">Important links:</h2>
+
+        <!--Link sections (made up links)-->
+        <ul>
+          <li>
+            <i><a href="https://betting-form.com">Place Bets - Google Form</a></i>
+            <aside>
+              <strong>(For legal reasons, this is not a real link to bet)</strong>
+            </aside>
+          </li>
+          <li>
+            <i><a href="mailto:pr-lead@gmail.com">PR lead's email</a></i>
+            <aside>
+              For a little BTS <em>special</em> footage!
+            </aside>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <hr>
+    <footer>
+      <p><i>Site made by Ki Diaz</i></p>
+
+      <i>Do you like this site?</i>
+      <button class="like site" type="button">Like!</button>
+    </footer>
+  </body>
+  
+</html>
