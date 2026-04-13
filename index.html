@@ -1,102 +1,45 @@
-<!-- ELEMENTS TO INCLUDE
-
-DOCUMENT METADATA
--- title
--- meta
--- link 
-  - (usually <link> is used to link a stylesheet, but since we're not using CSS, 
-     you can use it to link a faviconLinks to an external site instead)
-
-CONTENT SECTIONING
--- main
--- header, footer
--- nav
--- h1, h2, h3
--- section
-
-TEXT CONTENT
--- div, span 
-  - (these elements may not be too useful without CSS / JavaScript, but are too important to leave out, 
-     so just include them somewhere in your document. It’s okay if they aren’t useful)
--- hr
--- p
--- ul
--- ol
--- li
-
-INLINE TEXT SEMANTICS
--- b
--- strong (know the differences between b and strong)
--- i
--- em (know the differences between i and em)
--- a
--- br
-
-IMAGES AND MULTIMEDIA
--- img
-- audio
-- video
-
-INTERACTIVE ELEMENTS
--- details
--- summary
-
-FORMS
--- form
--- fieldset
--- input (of types checkbox, radio, text, and date)**
--- textarea
--- datalist
--- select
--- option
--- button
--->
 
 <!DOCTYPE html>
-<!--Metadata-->
-<meta 
-  name="description"
-  content="The team 7 ate 9 meeting minutes discussing the upcoming fight between the pres and vp"
-/>
-
-<!-- Header for navigation buttons -->
-<header>
-  <div id="top-header">
-    <!-- Team Logo -->
-    <div id="logo">
-      <img src="Team789Logo.png" alt="Team789 Logo" width="580px" height="270px"/>
-    </div>
-
-    <!-- Navigation Menu -->
-    <nav>
-      <div id="menu">
-        <ul>
-          <li><a href="#sect1">Attendees</a></li>
-          <li><a href="#sect2">Agenda</a></li>
-          <li><a href="#sect3">Unfinished Business</a></li>
-          <li><a href="#sect4">New Business</a></li>
-          <li><a href="#sect5">Misc</a></li>
-          <li><a href="#sect6">Pictures/Diagrams</a></li>
-          <li><a href="#sect7">Audio Recording</a></li>
-          <li><a href="#sect8">Video Recording</a></li>
-          <li><a href="#sect9">Important Links</a></li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-</header>
-
 <html lang="en">
+  <meta 
+    name="description"
+    content="The team 7 ate 9 meeting minutes discussing the upcoming fight between the pres and vp"
+  >
+
   <head>
     <title>Team 789 Meeting Notes</title>
 
     <!--Boxing glove favicon-->
-    <link rel="icon" 
-      type="image/x-icon"
-      href="favicon.ico>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
   </head>
 
   <body>
+    <header>
+      <div id="top-header">
+        <!-- Team Logo -->
+        <div id="logo">
+          <img src="Team789Logo.png" alt="Team789 Logo" width="580" height="270">
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav>
+          <div id="menu">
+            <ul>
+              <li><a href="#sect1">Attendees</a></li>
+              <li><a href="#sect2">Agenda</a></li>
+              <li><a href="#sect3">Unfinished Business</a></li>
+              <li><a href="#sect4">New Business</a></li>
+              <li><a href="#sect5">Misc</a></li>
+              <li><a href="#sect6">Pictures/Diagrams</a></li>
+              <li><a href="#sect7">Audio Recording</a></li>
+              <li><a href="#sect8">Video Recording</a></li>
+              <li><a href="#sect9">Important Links</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
     <main>
       <hr/>
       <h1>Leadership meeting</h1>
@@ -205,7 +148,7 @@ FORMS
         </i>
         
         <!--Textbox to leave feedback-->
-        <label for="cqc">Leave your feedback here:</label>
+        <label for="cqc">Leave your feedback here:</label> <br>
 
         <textarea id="cqc" name="feedback" rows="5" cols="35"></textarea>
       </section>
@@ -214,7 +157,7 @@ FORMS
         <h2 id="sect6">Pictures/Diagrams:</h2>
 
         <!--Fight promotion poster-->
-        <img src="fight-ad-poster.png" alt="Fight Poster Ad" width="200px" height="300px"/>
+        <img src="fight-ad-poster.png" alt="Fight Poster Ad" width="200" height="300">
       </section>
 
       <section>
